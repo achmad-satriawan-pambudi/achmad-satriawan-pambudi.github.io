@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+  background-color: #333;
+  margin: 0;
+  padding: 0;
+}
+    header {
+      background-color: black;
+      color: black;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    .logo {
+      width: 100px;
+      height: 50px;
+    }
+
+    .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .search {
+      display: flex;
+      align-items: center;
+    }
+
+    .search input {
+      padding: 8px;
+      border: none;
+      border-radius: 5px;
+      margin-right: 5px;
+      width: 200px;
+      background-color: rgb(216, 216, 216);
+    }
+
+    .search button {
+      padding: 8px 12px;
+      background-color: #007bff;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .logo-header {
+      display: flex;
+      gap: 10px;
+    }
+
+    .logo-x img {
+      width: 20px;
+      height: 50px;
+      object-fit: contain;
+    }
+
+    .icon {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background-color: transparent;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .icon a {
+      display: inline-block;
+      text-decoration: none;
+      color: #fff;
+      text-align: center;
+      line-height: 40px;
+    }
+
+    .card {
+      width: 200px;
+      height: 360px;
+      background-color: black;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      margin: 20px;
+      float: left;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 95%;
+      height: auto;
+      margin: 5px;
+      background-color: white;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-content h3 {
+      margin-top: 0;
+      font-size: 20px;
+      color: white;
+    }
+
+    .card-content h4 {
+      margin-top: 5px;
+      font-size: 18px;
+      color: white;
+    }
+
+    .card-content a.btn {
+      display: inline-block;
+      padding: 8px 12px;
+      background-color: #007bff;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .card-content a.btn:hover {
+      background-color: #0056b3;
+    }
+
+    .keranjang {
+      margin: 17px;
+    }
+
+    .keranjang-container {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+    .keranjang {
+      margin: 0 auto;
+      max-width: 800px;
+    }
+
+    #notaPembelian {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <img src="LOBBY TOKU.png" >
+    </div>
+    <div class="search">
+        <input type="text" placeholder="Cari...">
+        <button>Search</button>
+    </div>
+    <div class="logo-header">
+        <div class="logo-x">
+            <div class="icon">
+                <a href="#"><img src="pesan.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="card">
+  <img src="jacket.jpg" alt="Placeholder Image">
+  <div class="card-content">
+      <h3>Jacket</h3>
+    <h4>Rp.85.000</h4>
+    <button onclick="tambahBarang(85000, 'jacket')" class="btn">Masukan keranjang</button>
+  </div>
+</div>
+
+<div class="card">
+    <img src="celana.jpg" alt="Placeholder Image">
+    <div class="card-content">
+        <h3>Celana</h3>
+      <h4>Rp.74.000</h4>
+      <button onclick="tambahBarang(74000, 'celana')" class="btn">Masukan keranjang</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="cincin.jpg" alt="Placeholder Image">
+    <div class="card-content">
+        <h3>Cincin</h3>
+      <h4>Rp.18.000</h4>
+      <button onclick="tambahBarang(18000, 'cincin')" class="btn">Masukan keranjang</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="celana kargo.jpg" alt="Placeholder Image">
+    <div class="card-content">
+        <h3>Celana kargo</h3>
+      <h4>Rp.67.000</h4>
+      <button onclick="tambahBarang(67000, 'celana kargo')" class="btn">Masukan keranjang</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="kalung.jpg" alt="Placeholder Image">
+    <div class="card-content">
+        <h3>Kalung</h3>
+      <h4>Rp.33.000</h4>
+      <button onclick="tambahBarang(33000, 'kalung')" class="btn">Masukan keranjang</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="topi.jpg" alt="Placeholder Image">
+    <div class="card-content">
+        <h3>Topi</h3>
+      <h4>Rp.25.000</h4>
+      <button onclick="tambahBarang(25000, 'topi')" class="btn">Masukan keranjang</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="sepatu.jpg" alt="Placeholder Image">
+    <div class="card-content">
+        <h3>Sepatu</h3>
+      <h4>Rp.95.000</h4>
+      <button onclick="tambahBarang(95000), 'sepatu'" class="btn">Masukan keranjang</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="dompet.jpg" alt="Placeholder Image">
+    <div class="card-content">
+        <h3>Dompet</h3>
+      <h4>Rp.52.000</h4>
+      <button onclick="tambahBarang(52000, 'dompet')" class="btn">Masukan keranjang</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="gelang.jpg" alt="Placeholder Image">
+    <div class="card-content">
+        <h3>Gelang</h3>
+      <h4>Rp.47.000</h4>
+      <button onclick="tambahBarang(47000, 'gelang')" class="btn">Masukan keranjang</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="kaos.jpg" alt="Placeholder Image">
+    <div class="card-content">
+        <h3>Kaos</h3>
+      <h4>Rp.33.000</h4>
+      <button onclick="tambahBarang(33000, 'kaos')" class="btn">Masukan keranjang</button>
+    </div>
+  </div>
+
+  <div class="keranjang-container">
+    <div class="keranjang">
+      <h2>Keranjang Belanja</h2>
+      <div id="notaPembelian">
+        <p>Jumlah Barang: <span id="jumlahBarang">0</span></p>
+        <p>Total Harga: Rp. <span id="totalHarga">0</span></p>
+        <button onclick="submitNota()">Submit</button>
+      </div>
+    </div>
+  </div>
+  <div id="hasilPencarian" class="card-container"></div>
+  
+  <script>
+    let jumlah = 0;
+    let totalHarga = 0;
+    let keranjang = [];
+    let daftarBarang = [
+      { nama: 'jacket', harga: 85000  },
+      { nama: 'celana', harga: 74000 },
+      { nama: 'cincin', harga: 18000 },
+      { nama: 'celana kargo', harga: 67000 },
+      { nama: 'kalung', harga: 33000 },
+      { nama: 'topi', harga: 25000 },
+      { nama: 'sepatu', harga: 95000 },
+      { nama: 'dompet', harga: 52000 },
+      { nama: 'gelang', harga: 47000 },
+      { nama: 'kaos', harga: 33000 },
+    ];
+
+    function tambahBarang(harga, nama) {
+      jumlah++;
+      totalHarga += harga;
+      keranjang.push({ nama: nama, harga: harga });
+      submitNota();
+    }
+
+
+    function submitNota() {
+  let notaPembelian = document.getElementById('notaPembelian');
+  notaPembelian.innerHTML = '<h3>Nota Pembelian</h3>';
+  localStorage.setItem('keranjang', JSON.stringify(keranjang));
+  let daftarHarga = {};
+
+  keranjang.forEach(item => {
+    if (daftarHarga[item.nama]) {
+      daftarHarga[item.nama].jumlah++;
+      daftarHarga[item.nama].totalHarga += item.harga;
+    } else {
+      daftarHarga[item.nama] = { jumlah: 1, totalHarga: item.harga };
+    }
+  });
+
+  for (const barang in daftarHarga) {
+    const { jumlah, totalHarga } = daftarHarga[barang];
+    let detailItem = document.createElement('p');
+    detailItem.textContent = `${barang} x${jumlah} Rp. ${totalHarga}`;
+    notaPembelian.appendChild(detailItem);
+  }
+
+  let totalHargaElement = document.createElement('p');
+  totalHargaElement.textContent = `Total Harga: Rp. ${totalHarga}`;
+  notaPembelian.appendChild(totalHargaElement);
+
+  let submitButton = document.createElement('button');
+  submitButton.textContent = 'Submit';
+  submitButton.onclick = function () {
+    window.location.href = 'nota.html';
+  };
+  notaPembelian.appendChild(submitButton);
+}
+document.addEventListener('DOMContentLoaded', function () {
+
+
+  const hasilPencarianContainer = document.getElementById('hasilPencarian');
+
+  searchInput.addEventListener('input', function () {
+    const searchTerm = searchInput.value.toLowerCase();
+
+    const hasilPencarian = daftarBarang.filter(item => {
+      return item.nama.toLowerCase().includes(searchTerm);
+    });
+
+    tampilkanHasilPencarian(hasilPencarian);
+  });
+
+  function tampilkanHasilPencarian(hasilPencarian) {
+    hasilPencarianContainer.innerHTML = '';
+
+    hasilPencarian.forEach(item => {
+      let card = document.createElement('div');
+      card.classList.add('card');
+      card.innerHTML = `
+        <img src="${item.gambar}" alt="${item.nama}">
+        <div class="card-content">
+          <h3>${item.nama}</h3>
+          <h4>Rp.${item.harga}</h4>
+          <button onclick="tambahBarang(${item.harga}, '${item.nama}')" class="btn">Masukan keranjang</button>
+        </div>
+      `;
+      hasilPencarianContainer.appendChild(card);
+    });
+  }
+});
+
+  </script>
+
+</body>
+
+</html>

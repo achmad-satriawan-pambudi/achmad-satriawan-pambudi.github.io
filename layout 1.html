@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <title>Login Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url(LOBBY\ TOKU\ hitam.png);
+            background-color: white;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: sans-serif;
+        }
+
+        .input {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(21, 26, 24, 0.9);
+            padding: 50px;
+            width: 270px;
+            box-shadow: 0px 0px 25px 10px rgb(249, 238, 238);
+            border-radius: 15px;
+        }
+
+        .input h1 {
+            text-align: center;
+            color: white;
+            font-size: 30px;
+            font-family: sans-serif;
+            letter-spacing: 3px;
+            padding-top: 0;
+            margin-top: -20px;
+        }
+
+        .box-input {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px;
+            border-bottom: 2px solid white;
+            padding: 8px 0;
+        }
+
+        .box-input i {
+            font-size: 23px;
+            color: white;
+            padding: 5px 0;
+        }
+
+        .box-input input {
+            width: 85%;
+            padding: 5px 0;
+            background: none;
+            border: none;
+            outline: none;
+            color: white;
+            font-size: 18px;
+        }
+
+        .box-input input::placeholder {
+            color: white;
+        }
+
+        .btn-input {
+            margin-top: 20px;
+            background: none;
+            border: 1px solid white;
+            width: 100%;
+            padding: 10px;
+            color: white;
+            font-size: 18px;
+            letter-spacing: 3px;
+            cursor: pointer;
+            transition: all .2s;
+            border-radius: 10px;
+        }
+
+        .btn-input:hover {
+            background: rgb(227, 223, 223);
+        }
+
+        .bottom {
+            margin-top: 20px;
+        }
+
+        .bottom p {
+            color: white;
+            font-size: 15px;
+            text-decoration: none;
+        }
+
+        .bottom a {
+            color: rgb(231, 20, 20);
+            font-size: 15px;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="input">
+        <h1>LOGIN</h1>
+        <div class="box-input">
+            <i class="fas fa-envelope"></i>
+            <input type="text" placeholder="Email">
+        </div>
+
+        <div class="box-input">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Password">
+            
+        </div>
+        <a href="layout ke 2.html"><button type="submit" name="register" class="btn-input">Login</button></a>
+        <div class="bottom">
+            <p>Belum punya akun?
+                <a href="register.html">Register disini</a>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
